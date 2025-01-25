@@ -1,101 +1,43 @@
 body {
-    margin: 0;
-    display: flex;
+    background-color: #d9d9d9;
 }
 
-/* Kolor tła */
-.left, .right {
-    background-color: #f2f2f2;
+.textGorny {
+    float: right;
+    align-content: start;
+    font-size: 90px;
+    color: #423f32;
 }
 
-/* Lewa i prawa strona */
-.left, .right {
-    width: 50%;
-    height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* Wyrównanie dla logo */
-.left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-/* Stylowanie logo */
-.image {
-    width: 50%;
-    margin-top: 20px;
-}
-
-/* Prawa strona - wyśrodkowanie zawartości */
-.right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Prawa strona - okno z przyciskami */
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-    background-color: #d3d3d3;
+.ramka {
+    background-color: #f1ebe5;
+    margin: 30px;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    background-color: #f1ebe5;
+    margin: 30px;
+    padding: 30px;
     width: 500px;
+    position: absolute;
+    right: 20px;
+    top: 50px;
 }
 
-/* Style przycisków */
-.btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #a0a0a0;
-    color: white;
+.poleFormularza {
+    width: 500px;
+    height: 45px;
+    font-size: 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding-left: 10px;
 }
 
-.btn:hover {
-    background-color: #5f5f5f;
-}
-
-/* Ikony przycisków społecznościowych */
-.social-media {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-/* Stylowanie przycisków społecznościowych */
-.social-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #ccc;
-    display: inline-block;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.facebook {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg');
-}
-
-.instagram {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png');
-}
-
-.social-btn:hover {
-    opacity: 0.8;
+.przycisk {
+    background-color: #f1ebe5;
+    color: #423f32;
+    font-size: 30px;
+    width: 510px;
+    height: 80px;
+    border: 1px black solid;
 }

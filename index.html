@@ -2,13 +2,83 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zakład fryzjerski</title>
+    <title>Strona Logowania</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 280px;
+        }
+        .login-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 23px;
+            color: #333;
+        }
+        .login-container label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login-container input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-container button {
+            width: 90%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+			 position: center;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .login-container a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div>
-      Moja zmiana
+    <div class="login-container">
+        <h1>Logowanie</h1>
+        <form action="/login" method="POST">
+            <label for="username">Nazwa użytkownika</label>
+            <input type="text" id="username" name="username" placeholder="Wprowadź nazwę użytkownika" required>
+            
+            <label for="password">Hasło</label>
+            <input type="password" id="password" name="password" placeholder="Wprowadź hasło" required>
+            
+            <button type="submit">Zaloguj się</button>
+        </form>
+        <a href="/register">Nie masz konta? Zarejestruj się</a>
     </div>
 </body>
 </html>

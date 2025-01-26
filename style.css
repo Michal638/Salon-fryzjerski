@@ -42,6 +42,17 @@ body {
     border: 1px black solid;
 }
 
+.przyciskRejestracja {
+    background-color: #f1ebe5;
+    color: #423f32;
+    font-size: 30px;
+    width: 510px;
+    height: 80px;
+    border: 1px black solid;
+    margin: 20px;
+}
+
+
 .login-container {
     display: block;
     margin-left: auto;
@@ -94,4 +105,66 @@ body {
 }
 .login-container a:hover {
     text-decoration: underline;
+}
+
+
+
+
+
+
+.calendar {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.calendar-header button {
+    background: #423f32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.calendar-header button:hover {
+    background: #0056b3;
+}
+.calendar-header span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #423f32;
+    color: white;
+}
+.time-column {
+    background-color: #f0f0f0;
+    text-align: right;
+    font-weight: bold;
+}
+.clickable {
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+.clickable:hover {
+    background-color: #e0e0ff;
+
 }

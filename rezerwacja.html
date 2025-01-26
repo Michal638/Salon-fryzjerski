@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakład fryzjerski</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <a href="index.html"><img src="logo.png" height="250"></a>
+        <p class="textGorny" id="naglowek">
+            Wybierz usługę&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+    </div>
+
+
+
+    <div class="ramka" id="uslugi" style="display: block;">
+        <form>
+            <button id="usluga1" class="przyciskRejestracja" type="button">Usługa 1 - xx zł</button>
+            <button id="usluga2" class="przyciskRejestracja" type="button">Usługa 2 - xx zł</button>
+            <button id="usluga3" class="przyciskRejestracja" type="button">Usługa 3 - xx zł</button>
+            <button id="usluga4" class="przyciskRejestracja" type="button">Usługa 4 - xx zł</button>
+            <button id="usluga5" class="przyciskRejestracja" type="button">Usługa 5 - xx zł</button>
+            <button id="usluga6" class="przyciskRejestracja" type="button">Usługa 6 - xx zł</button>
+        </form>
+    </div>
+
+    <div class="ramka" id="kalendarz" style="display: none;">
+        
+        <div class="calendar">
+            <div class="calendar-header">
+                <button id="prev-week">&lt; Poprzedni tydzień</button>
+                <span id="week-range">Ładowanie...</span>
+                <button id="next-week">Następny tydzień &gt;</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="time-column">Godzina</th>
+                        <th>Poniedziałek</th>
+                        <th>Wtorek</th>
+                        <th>Środa</th>
+                        <th>Czwartek</th>
+                        <th>Piątek</th>
+                        <th>Sobota</th>
+                        <th>Niedziela</th>
+                    </tr>
+                </thead>
+                <tbody id="calendar-body">
+                    <!-- Wiersze wygenerowane przez skrypt -->
+                </tbody>
+            </table>
+        </div>
+
+        
+    </div>
+
+    <script src="scriptsRezerwacja.js"></script>
+
+
+</body>
+
+</html>

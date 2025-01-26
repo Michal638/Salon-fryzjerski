@@ -1,0 +1,43 @@
+body {
+    background-color: #d9d9d9;
+}
+
+.textGorny {
+    float: right;
+    align-content: start;
+    font-size: 90px;
+    color: #423f32;
+}
+
+.ramka {
+    background-color: #f1ebe5;
+    margin: 30px;
+    padding: 30px;
+}
+
+.menu {
+    background-color: #f1ebe5;
+    margin: 30px;
+    padding: 30px;
+    width: 500px;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+}
+
+.poleFormularza {
+    width: 500px;
+    height: 45px;
+    font-size: 20px;
+    border: none;
+    padding-left: 10px;
+}
+
+.przycisk {
+    background-color: #f1ebe5;
+    color: #423f32;
+    font-size: 30px;
+    width: 510px;
+    height: 80px;
+    border: 1px black solid;
+}

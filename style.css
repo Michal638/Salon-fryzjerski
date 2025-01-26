@@ -55,6 +55,11 @@ body {
     margin: 20px;
 }
 
+.potwUslugi{
+    font-size: 30px;
+    color: #423f32;
+}
+
 
 .login-container {
     display: block;
@@ -169,5 +174,11 @@ th {
 }
 .clickable:hover {
     background-color: #e0e0ff;
-
+}
+.occupied {
+    background-color: #ffcccc;
+    cursor: not-allowed;
+}
+.occupied:hover {
+    background-color: #ffcccc;
 }

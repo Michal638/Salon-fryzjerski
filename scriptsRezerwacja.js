@@ -1,9 +1,18 @@
 var wybranaUsluga;
 var wybranaData;
 var wybranaGodzina;
+var wybranaCena;
+var wybranyCzasTrwania;
 var uslugi = document.getElementById("uslugi");
 var kalendarz = document.getElementById("kalendarz");
 var naglowek = document.getElementById("naglowek");
+var potwUsluga = document.getElementById("potwUsluga");
+var potwTermin = document.getElementById("potwTermin");
+var potwCzasTrwania = document.getElementById("potwCzasTrwania");
+var potwCena = document.getElementById("potwCena");
+var potwierdzenie = document.getElementById("potwierdzenie");
+var potwierdzBtn = document.getElementById("potwierdzBtn");
+
 var usluga1 = document.getElementById("usluga1");
 var usluga2 = document.getElementById("usluga2");
 var usluga3 = document.getElementById("usluga3");
@@ -15,10 +24,63 @@ usluga1.addEventListener("click", function(){
     uslugi.style.display = "none";
     kalendarz.style.display = "block";
     naglowek.innerText = "Wybierz termin";
+    potwUsluga.textContent = "Usługa 1";
+    potwCena.textContent = "50 zł";
+    potwCzasTrwania.textContent = "30 minut";
+});
+
+usluga2.addEventListener("click", function(){
+    uslugi.style.display = "none";
+    kalendarz.style.display = "block";
+    naglowek.innerText = "Wybierz termin";
+    potwUsluga.textContent = "Usługa 2";
+    potwCena.textContent = "100 zł";
+    potwCzasTrwania.textContent = "30 minut";
+});
+
+usluga3.addEventListener("click", function(){
+    uslugi.style.display = "none";
+    kalendarz.style.display = "block";
+    naglowek.innerText = "Wybierz termin";
+    potwUsluga.textContent = "Usługa 3";
+    potwCena.textContent = "120 zł";
+    potwCzasTrwania.textContent = "30 minut";
+});
+
+usluga4.addEventListener("click", function(){
+    uslugi.style.display = "none";
+    kalendarz.style.display = "block";
+    naglowek.innerText = "Wybierz termin";
+    potwUsluga.textContent = "Usługa 4";
+    potwCena.textContent = "70 zł";
+    potwCzasTrwania.textContent = "30 minut";
+});
+
+usluga5.addEventListener("click", function(){
+    uslugi.style.display = "none";
+    kalendarz.style.display = "block";
+    naglowek.innerText = "Wybierz termin";
+    potwUsluga.textContent = "Usługa 5";
+    potwCena.textContent = "60 zł";
+    potwCzasTrwania.textContent = "30 minut";
+});
+
+usluga6.addEventListener("click", function(){
+    uslugi.style.display = "none";
+    kalendarz.style.display = "block";
+    naglowek.innerText = "Wybierz termin";
+    potwUsluga.textContent = "Usługa 6";
+    potwCena.textContent = "200 zł";
+    potwCzasTrwania.textContent = "30 minut";
 });
 
 
-
+potwierdzBtn.addEventListener("click", function(){
+    alert("Rejestracja potwierdzona");
+   // window.location.href = 'index.html';
+   uslugi.style.display = "block";
+    potwierdzenie.style.display = "none";
+});
 
 
 
@@ -28,6 +90,17 @@ const calendarBody = document.getElementById('calendar-body');
         const nextWeekButton = document.getElementById('next-week');
 
         let currentDate = new Date();
+
+        // Example of occupied slots
+        const occupiedSlots = [
+            { date: '2025-01-27', time: '9:00' },
+            { date: '2025-01-27', time: '10:30' },
+            { date: '2025-01-29', time: '10:00' },
+            { date: '2025-01-29', time: '10:30' },
+            { date: '2025-01-30', time: '8:00' },
+            { date: '2025-01-30', time: '8:30' },
+            { date: '2025-01-30', time: '9:00' }
+        ];
 
         // Helper function to format date as YYYY-MM-DD
         function formatDate(date) {
@@ -79,18 +152,42 @@ const calendarBody = document.getElementById('calendar-body');
                 // Day columns
                 for (let i = 0; i < 7; i++) {
                     const cell = document.createElement('td');
+                    const cellDate = formatDate(daysOfWeek[i]);
+
                     cell.className = 'clickable';
                     cell.dataset.time = time;
-                    cell.dataset.date = formatDate(daysOfWeek[i]);
+                    cell.dataset.date = cellDate;
                     cell.textContent = '';
-                    cell.addEventListener('click', () => {
-                        alert(`Wybrany termin: ${cell.dataset.date} ${time}`);
-                    });
+
+                    const isOccupied = occupiedSlots.some(slot => slot.date === cellDate && slot.time === time);
+                    if (isOccupied) {
+                        cell.classList.add('occupied');
+                        cell.removeEventListener('click', handleCellClick);
+                    } else {
+                        cell.addEventListener('click', handleCellClick);
+                    }
+
                     row.appendChild(cell);
                 }
 
                 calendarBody.appendChild(row);
             });
+        }
+
+        function handleCellClick(event) {
+            const { time, date } = event.target.dataset;
+           // alert(`Selected time: ${time} on date ${date}`);
+            wybranaData = date;
+            wybranaGodzina = time;
+            potwTermin.innerHTML = date +" " + time;
+
+            //occupiedSlots.add(date: date, time: time);
+            occupiedSlots.push({ date, time });
+            potwierdzenie.style.display = "block";
+            kalendarz.style.display = "none";
+            renderWeek(currentDate);
+
+
         }
 
         // Event listeners for navigation buttons

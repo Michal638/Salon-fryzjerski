@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strona Logowania</title>
 </head>
+
 <body>
-    <div class="login-container">
-        <h1>Logowanie</h1>
-        <form action="/login" method="POST">
-            <label for="username">Nazwa użytkownika</label>
-            <input type="text" id="username" name="username" placeholder="Wprowadź nazwę użytkownika" required>
-            
-            <label for="password">Hasło</label>
-            <input type="password" id="password" name="password" placeholder="Wprowadź hasło" required>
-            
-            <button type="submit">Zaloguj się</button>
-        </form>
-        <a href="/register">Nie masz konta? Zarejestruj się</a>
+    <div>
+        <a href="index.html"><img src="logo.png" height="250"></a>
+        <p class="textGorny">
+            Zaloguj
+        </p>
     </div>
+    <div class="ramka">
+        <form>
+            <input type="text" class="poleFormularza" id="uzytkownik" name="username" placeholder="Email"
+                required><br><br>
+            <input type="password" class="poleFormularza" id="haslo" name="password" placeholder="Hasło"
+                required><br><br>
+
+            <button type="button" class="przycisk" id="zalogujBtn">Zaloguj się</button><br><br>
+        </form>
+        <a href="rejestracja.html">Nie masz konta? Zarejestruj się</a>
+    </div>
+    <script src="scriptsLogowanie.js"></script>
 </body>
+
 </html>

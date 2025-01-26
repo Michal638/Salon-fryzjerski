@@ -7,6 +7,9 @@ body {
     align-content: start;
     font-size: 90px;
     color: #423f32;
+    position: absolute;
+    top: 10px;
+    left: 700px;
 }
 
 .ramka {
@@ -42,6 +45,22 @@ body {
     border: 1px black solid;
 }
 
+.przyciskRejestracja {
+    background-color: #f1ebe5;
+    color: #423f32;
+    font-size: 30px;
+    width: 510px;
+    height: 80px;
+    border: 1px black solid;
+    margin: 20px;
+}
+
+.potwUslugi {
+    font-size: 30px;
+    color: #423f32;
+}
+
+
 .login-container {
     display: block;
     margin-left: auto;
@@ -52,17 +71,20 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 280px;
 }
+
 .login-container h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 23px;
     color: #333;
 }
+
 .login-container label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
+
 .login-container input {
     width: 90%;
     padding: 10px;
@@ -71,6 +93,7 @@ body {
     border-radius: 5px;
     font-size: 16px;
 }
+
 .login-container button {
     width: 90%;
     padding: 10px;
@@ -80,11 +103,13 @@ body {
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-     position: center;
+    position: center;
 }
+
 .login-container button:hover {
     background-color: #0056b3;
 }
+
 .login-container a {
     display: block;
     text-align: center;
@@ -92,9 +117,11 @@ body {
     color: #007bff;
     text-decoration: none;
 }
+
 .login-container a:hover {
     text-decoration: underline;
 }
+
 
 
 .gallery {
@@ -124,4 +151,84 @@ body {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+}
+
+
+
+
+.calendar {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background: #423f32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar-header button:hover {
+    background: #0056b3;
+}
+
+.calendar-header span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #423f32;
+    color: white;
+}
+
+.time-column {
+    background-color: #f0f0f0;
+    text-align: right;
+    font-weight: bold;
+}
+
+.clickable {
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.clickable:hover {
+    background-color: #e0e0ff;
+}
+
+.occupied {
+    background-color: #ffcccc;
+    cursor: not-allowed;
+}
+
+.occupied:hover {
+    background-color: #ffcccc;
+
 }

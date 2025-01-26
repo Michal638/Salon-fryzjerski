@@ -7,6 +7,9 @@ body {
     align-content: start;
     font-size: 90px;
     color: #423f32;
+    position: absolute;
+    top: 10px;
+    left: 700px;
 }
 
 .ramka {
